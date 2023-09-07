@@ -21,7 +21,7 @@ export const RecipeCard = StyleSheet.create({
     width: (SCREEN_WIDTH - (recipeNumColums + 1) * RECIPE_ITEM_MARGIN) / recipeNumColums,
     height: RECIPE_ITEM_HEIGHT + 75,
     borderColor: '#cccccc',
-    borderWidth: 0.5,
+    borderWidth: 2,
     borderRadius: 15,
     backgroundColor: "#fff",
     //elevation: 5, // Add shadow for Android
@@ -46,7 +46,7 @@ export const RecipeCard = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     color: '#444444',
-    marginTop: 3,
+    marginTop: 20,
     marginRight: 5,
     marginLeft: 5,
   },
