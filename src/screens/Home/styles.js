@@ -40,7 +40,15 @@ const styles = StyleSheet.create({
   categoriesInfo: {
     marginTop: 3,
     marginBottom: 5
-  }
+  },
+  welcomeText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginTop: 20,
+    marginBottom: 10,
+    color: '#333', // Text color
+  },
 });
 
 export default styles;

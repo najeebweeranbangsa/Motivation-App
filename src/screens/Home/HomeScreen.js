@@ -1,5 +1,6 @@
-import React, { useLayoutEffect } from "react";
+import React, { useLayoutEffect, useEffect, useState } from "react";
 import { FlatList, Text, View, Image, TouchableHighlight } from "react-native";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import styles from "./styles";
 import { categories } from "../../data/dataArrays";
 import { getNumberOfRecipes } from "../../data/MockDataAPI";
@@ -7,6 +8,12 @@ import MenuImage from "../../components/MenuImage/MenuImage";
 
 export default function CategoriesScreen(props) {
   const { navigation } = props;
+  const [userName, setUserName] = useState('');
+
+  useEffect(() => {
+    // Load the user's name from AsyncStorage when the component mounts
+    loadUserName();
+  }, []);
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -15,6 +22,19 @@ export default function CategoriesScreen(props) {
       headerRight: () => <View />,
     });
   }, []);
+
+  const loadUserName = async () => {
+    try {
+      // Retrieve the user's name from AsyncStorage
+      const savedUserName = await AsyncStorage.getItem('userName');
+
+      if (savedUserName !== null) {
+        setUserName(savedUserName);
+      }
+    } catch (error) {
+      console.error('Error loading user name:', error);
+    }
+  };
 
   const onPressCategory = (item) => {
     const title = item.name;
@@ -34,6 +54,7 @@ export default function CategoriesScreen(props) {
 
   return (
     <View>
+      <Text style={styles.welcomeText}>Welcome {userName}</Text>
       <FlatList data={categories} renderItem={renderCategory} keyExtractor={(item) => `${item.id}`} />
     </View>
   );
