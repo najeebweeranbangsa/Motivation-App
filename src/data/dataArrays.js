@@ -634,9 +634,9 @@ export const ingredients = [
   },
 ];
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-export const mood = [
+export const moods = [
   {
     id: 3,
     name: 'Angry',
@@ -657,10 +657,10 @@ export const mood = [
 
 ];
 
-export const motivation = [
+export const motivations = [
   {
     recipeId: 122,
-    categoryId: 3,
+    moodId: 3,
     title: 'Love Motivation 1',
     photo_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSolvXcYRudN2iRY5O-ogzyXBasnt4764ns0w&usqp=CAU',
     photosArray: [
@@ -674,7 +674,7 @@ export const motivation = [
   },
   {
     recipeId: 3,
-    categoryId: 4,
+    moodId: 4,
     title: 'Triple Berry Smoothie',
     photo_url:
       'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-how-to-make-a-smoothie-horizontal-1542310071.png?crop=0.803xw:0.923xh;0.116xw,0.00510xh&resize=768:*',
@@ -695,7 +695,7 @@ export const motivation = [
 
 ];
 
-export const story = [
+export const stories = [
   {
     ingredientId: 0,
     name: 'Oil',

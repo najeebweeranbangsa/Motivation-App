@@ -1,9 +1,99 @@
 import { Text } from 'react-native';
 import React, { Component } from 'react';
-import { recipes, categories, ingredients } from './dataArrays';
+import { recipes, categories, ingredients, moods, motivations, stories } from './dataArrays';
 
 
-// get functions
+// get motivation functions
+export function getMoodById(moodId) {
+  let mood;
+  moods.map(data => {
+    if (data.id == moodId) {
+      mood = data;
+    }
+  });
+  return mood;
+}
+
+export function getstoriesName(storyID) {
+  let name;
+  stories.map(data => {
+    if (data.storyId == storyID) {
+      name = data.name;
+    }
+  });
+  return name;
+}
+
+export function getstoryUrl(storyID) {
+  let url;
+  stories.map(data => {
+    if (data.storyId == storyID) {
+      url = data.photo_url;
+    }
+  });
+  return url;
+}
+
+export function getMoodName(moodId) {
+  let name;
+  moods.map(data => {
+    if (data.id == moodId) {
+      name = data.name;
+    }
+  });
+  return name;
+}
+
+export function getMotivations(moodId) {
+  const motivationsArray = [];
+  motivations.map(data => {
+    if (data.moodId == moodId) {
+      motivationsArray.push(data);
+    }
+  });
+  return motivationsArray;
+}
+
+// motivation modification
+export function getMotivationsByStory(storyId) {
+  const motivationsArray = [];
+  motivations.map(data => {
+    data.stories.map(index => {
+      if (index[0] == storyId) {
+        motivationsArray.push(data);
+      }
+    });
+  });
+  return motivationsArray;
+}
+
+export function getNumberOfMotivations(moodId) {
+  let count = 0;
+  motivations.map(data => {
+    if (data.moodId == moodId) {
+      count++;
+    }
+  });
+  return count;
+}
+
+export function getAllStories(idArray) {
+  const storiesArray = [];
+  idArray.map(index => {
+    stories.map(data => {
+      if (data.storyId == index[0]) {
+        storiesArray.push([data, index[1]]);
+      }
+    });
+  });
+  return storiesArray;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// get food functions
 export function getCategoryById(categoryId) {
   let category;
   categories.map(data => {
@@ -54,7 +144,7 @@ export function getRecipes(categoryId) {
   return recipesArray;
 }
 
-// modifica
+// food modification
 export function getRecipesByIngredient(ingredientId) {
   const recipesArray = [];
   recipes.map(data => {
