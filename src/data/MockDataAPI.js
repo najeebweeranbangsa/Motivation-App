@@ -2,6 +2,8 @@ import { Text } from 'react-native';
 import React, { Component } from 'react';
 import { recipes, categories, ingredients } from './dataArrays';
 
+
+// get functions
 export function getCategoryById(categoryId) {
   let category;
   categories.map(data => {

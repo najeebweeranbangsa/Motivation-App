@@ -633,3 +633,84 @@ export const ingredients = [
       'http://images.media-allrecipes.com/userphotos/960x960/3758635.jpg'
   },
 ];
+
+
+
+export const mood = [
+  {
+    id: 3,
+    name: 'Angry',
+    photo_url:
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSolvXcYRudN2iRY5O-ogzyXBasnt4764ns0w&usqp=CAU'
+  },
+  {
+    id: 1,
+    name: 'Happy',
+    photo_url: 'https://www.betterup.com/hubfs/latin-woman-working-in-office.jpg'
+  },
+  {
+    id: 2,
+    name: 'Sad',
+    photo_url:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5Z3LoiTeDxlRDSwvtFrxbX5zcl2kOLh5ScA&usqp=CAU'
+  },
+
+];
+
+export const motivation = [
+  {
+    recipeId: 122,
+    categoryId: 3,
+    title: 'Love Motivation 1',
+    photo_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSolvXcYRudN2iRY5O-ogzyXBasnt4764ns0w&usqp=CAU',
+    photosArray: [
+      'https://images.pexels.com/photos/4451923/pexels-photo-4451923.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      "https://img.freepik.com/premium-photo/beautiful-couple-love-tourists-full-height-dawn-look-into-each-other-s-eyes-smile_139914-214.jpg",
+    ],
+    time: '15',
+    ingredients: [[0, '200ml'], [1, '5g'], [2, '300g']],
+    description:
+      'True, we love life, not because we are used to living, but because we are used to loving. There is always some madness in love, but there is also always some reason in madness.'
+  },
+  {
+    recipeId: 3,
+    categoryId: 4,
+    title: 'Triple Berry Smoothie',
+    photo_url:
+      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-how-to-make-a-smoothie-horizontal-1542310071.png?crop=0.803xw:0.923xh;0.116xw,0.00510xh&resize=768:*',
+    photosArray: [
+      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-how-to-make-a-smoothie-horizontal-1542310071.png?crop=0.803xw:0.923xh;0.116xw,0.00510xh&resize=768:*',
+      'https://www.vitamix.com/media/other/images/xVitamix-Triple-Berry-Smoothie-square-crop__1.jpg.pagespeed.ic.OgTC3ILD3R.jpg',
+      'http://images.media-allrecipes.com/userphotos/960x960/3798204.jpg',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrzui8MM6W66I29VZwVvcjpGv99JW3O1owgupc3KwB65rhAyrZ'
+    ],
+    time: '10',
+    ingredients: [
+      [59, '1'],
+      [60, '1/2 lbs'],
+      [61, '1/2 liters'],
+    ],
+    description: 'In a blender, combine all ingredients and blend until smooth. Then divide between 2 cups and top with blackberries, if desired.'
+  },
+
+];
+
+export const story = [
+  {
+    ingredientId: 0,
+    name: 'Oil',
+    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+  },
+  {
+    ingredientId: 1,
+    name: 'Salt',
+    photo_url:
+      'https://image.freepik.com/free-photo/sea-salt-wooden-bowl-isolated-white-background_29402-416.jpg'
+  },
+  {
+    ingredientId: 2,
+    name: 'Russet potatoes',
+    photo_url: 'http://www.valleyspuds.com/wp-content/uploads/Russet-Potatoes-cut.jpg'
+  },
+
+];
