@@ -640,19 +640,17 @@ export const moods = [
   {
     id: 3,
     name: 'Angry',
-    photo_url:
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSolvXcYRudN2iRY5O-ogzyXBasnt4764ns0w&usqp=CAU'
+    photo_url:'https://hotemoji.com/images/dl/3/pouting-face-emoji-by-twitter.png'
   },
   {
     id: 1,
     name: 'Happy',
-    photo_url: 'https://www.betterup.com/hubfs/latin-woman-working-in-office.jpg'
+    photo_url: 'https://emojiisland.com/cdn/shop/products/Happy_Emoji_Icon_5c9b7b25-b215-4457-922d-fef519a08b06_large.png?v=1571606090'
   },
   {
     id: 2,
     name: 'Sad',
-    photo_url:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5Z3LoiTeDxlRDSwvtFrxbX5zcl2kOLh5ScA&usqp=CAU'
+    photo_url:'https://www.cambridge.org/elt/blog/wp-content/uploads/2019/07/Sad-Face-Emoji.png'
   },
 
 ];

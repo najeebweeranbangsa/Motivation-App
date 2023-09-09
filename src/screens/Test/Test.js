@@ -1,19 +1,13 @@
 import React, { useLayoutEffect, useEffect, useState } from "react";
-import { FlatList, Text, View, Image, TouchableHighlight } from "react-native";
+import { FlatList, Text, View, Image, TouchableHighlight, StyleSheet, } from "react-native";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import styles from "./styles";
-import { categories } from "../../data/dataArrays";
-import { getNumberOfRecipes } from "../../data/MockDataAPI";
+import { moods } from "../../data/dataArrays";
+import { getNumberOfMotivations } from "../../data/MockDataAPI";
 import MenuImage from "../../components/MenuImage/MenuImage";
 
 export default function CategoriesScreen(props) {
   const { navigation } = props;
-  const [userName, setUserName] = useState('');
-
-  useEffect(() => {
-    // Load the user's name from AsyncStorage when the component mounts
-    loadUserName();
-  }, []);
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -22,19 +16,6 @@ export default function CategoriesScreen(props) {
       headerRight: () => <View />,
     });
   }, []);
-
-  const loadUserName = async () => {
-    try {
-      // Retrieve the user's name from AsyncStorage
-      const savedUserName = await AsyncStorage.getItem('userName');
-
-      if (savedUserName !== null) {
-        setUserName(savedUserName);
-      }
-    } catch (error) {
-      console.error('Error loading user name:', error);
-    }
-  };
 
   const onPressCategory = (item) => {
     const title = item.name;
@@ -47,15 +28,16 @@ export default function CategoriesScreen(props) {
       <View style={styles.categoriesItemContainer}>
         <Image style={styles.categoriesPhoto} source={{ uri: item.photo_url }} />
         <Text style={styles.categoriesName}>{item.name}</Text>
-        <Text style={styles.categoriesInfo}>{getNumberOfRecipes(item.id)} motivations</Text>
+        {/* <Text style={styles.categoriesInfo}>{getNumberOfMotivations(item.id)} motivations</Text> */}
       </View>
     </TouchableHighlight>
   );
 
   return (
     <View>
-      <Text style={styles.welcomeText}>Welcome {userName}</Text>
-      <FlatList data={categories} renderItem={renderCategory} keyExtractor={(item) => `${item.id}`} />
+      <Text style={styles.welcomeText}>MOOD TRACKER</Text>
+      <FlatList data={moods} renderItem={renderCategory} keyExtractor={(item) => `${item.id}`} />
     </View>
   );
-}
+};
+

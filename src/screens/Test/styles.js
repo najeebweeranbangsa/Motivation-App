@@ -3,20 +3,22 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   categoriesItemContainer: {
     flex: 1,
-    marginLeft: 30,
-    marginRight: 30,
+    marginLeft: 100,
+    marginRight: 100,
     marginTop:10,
     marginBottom:10,
     justifyContent: 'center',
     alignItems: 'center',
-    height: 215,
+    height: 135,
     borderColor: '#cccccc',
     borderWidth: 2,
     borderRadius: 20,
   },
   categoriesPhoto: {
-    width: '100%',
-    height: 155,
+    width: '48%',
+    height: '70%',
+    marginTop:10,
+    //marginBottom:5,
     borderRadius: 20,
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 0,
@@ -35,11 +37,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     color: '#333333',
-    marginTop: 5,
   },
   categoriesInfo: {
-    marginTop: 3,
-    marginBottom: 5
+    //marginTop: 3,
+    marginBottom: 10
   },
   welcomeText: {
     fontSize: 24,
