@@ -10,7 +10,7 @@ export default function DrawerContainer(props) {
     <View style={styles.content}>
       <View style={styles.container}>
         <MenuButton
-          title="HOME"
+          title="Home"
           source={require("../../../assets/icons/home.png")}
           onPress={() => {
             navigation.navigate("Home");
@@ -18,7 +18,15 @@ export default function DrawerContainer(props) {
           }}
         />
         <MenuButton
-          title="CATEGORIES"
+          title="Search"
+          source={require("../../../assets/icons/search.png")}
+          onPress={() => {
+            navigation.navigate("Search");
+            navigation.closeDrawer();
+          }}
+        />
+        <MenuButton
+          title="Categories"
           source={require("../../../assets/icons/category.png")}
           onPress={() => {
             navigation.navigate("Categories");
@@ -26,7 +34,7 @@ export default function DrawerContainer(props) {
           }}
         />
         <MenuButton
-          title="MOOD"
+          title="Mood"
           source={require("../../../assets/icons/ingredients.png")}
           onPress={() => {
             navigation.navigate("Test");
@@ -34,21 +42,14 @@ export default function DrawerContainer(props) {
           }}
         />
         <MenuButton
-          title="TEST"
+          title="Test"
           source={require("../../../assets/icons/info.png")}
           onPress={() => {
             navigation.navigate("Test");
             navigation.closeDrawer();
           }}
         />
-        <MenuButton
-          title="SEARCH"
-          source={require("../../../assets/icons/search.png")}
-          onPress={() => {
-            navigation.navigate("Search");
-            navigation.closeDrawer();
-          }}
-        />
+
       </View>
     </View>
   );
